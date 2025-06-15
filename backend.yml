@@ -45,7 +45,9 @@
 
     - name: Install Python mysql client
       ansible.builtin.pip:
-        name: PyMySQL
+        name:
+          - PyMySQL
+          - cryptography
         executable: pip3.9
 
     - name: Load Schema
