@@ -45,7 +45,8 @@
 
     - name: Install Python mysql client
       ansible.builtin.dnf:
-        name: mysql
+        name:
+           - PyMySQL
         state: installed
 
     - name: Load Schema
