@@ -59,6 +59,7 @@
       login_user: root
       login_password: ExpenseApp@1
       login_host: mysql-dev.mohdshuja.com
+      ignore_errors: yes
 
   - name: Start Backend Service
     ansible.builtin.systemd_service:
