@@ -1,0 +1,17 @@
+- name: MySQL Setup
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install mysql
+      ansible.builtin.dnf:
+        name: mysql-server
+        state: installed
+
+    - name: Setup Mysql Password
+      ansible.builtin.shell: mysql -h mysql-dev.mohdshuja.com -uroot -pExpenseApp@1
+
+    - name: start Mysql
+      ansible.builtin.systemd_service:
+        name: mysqld
+        state: started
+        enabled: yes
