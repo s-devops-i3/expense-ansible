@@ -26,6 +26,7 @@ pipelines:
                 - exec:
                     arguments:
                       - ansible.sh
+                      - frontend
                     command: bash
                     run_if: passed
       - QA:
