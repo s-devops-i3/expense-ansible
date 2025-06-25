@@ -16,6 +16,11 @@
         - cryptography
       executable: pip3.9
 
+  - name: Install MySQL Client
+    ansible.builtin.dnf:
+      name: mysql
+      state: installed
+
   - name: Check the DB connection with our password
     community.mysql.mysql_info:
       login_user: root
