@@ -28,11 +28,6 @@
       path: /app
       state: present
 
-  - name: install mysql client
-    ansible.builtin.dnf:
-      name: mysql
-      state: installed
-
   - name: Install Python MySQL Client
     ansible.builtin.pip:
       name:
