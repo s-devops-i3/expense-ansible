@@ -16,7 +16,9 @@
 
   - name: Adding expense user
     ansible.builtin.user:
-      name: expense
+      name: "{{app_user}}"
+      owner: "{{app_user}}"
+      group: "{{app_user}}"
 
   - name: Import app-pre-req task from common role
     ansible.builtin.import_role:
@@ -25,7 +27,7 @@
 
   - name: Download Nodejs dependencies
     community.general.npm:
-      path: /app
+      path: "{{app_loc}}"
       state: present
 
   - name: Install Python MySQL Client
@@ -49,7 +51,10 @@
       login_password: ExpenseApp@1
       login_host: mysql-dev.shujadevops.shop
 
-
+  - name: Import newrelic
+    ansible.builtin.import_role:
+      name: newrelic
+      tasks_from: nodejs
 
   - name: Start Backend Service
     ansible.builtin.systemd_service:
@@ -57,3 +62,4 @@
       state: restarted
       enabled: yes
       daemon_reload: yes
+
