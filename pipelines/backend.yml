@@ -30,7 +30,7 @@ pipelines:
                 - exec:
                     arguments:
                       - ansible.sh
-                      - frontend
+                      - backend
                     command: bash
                     run_if: passed
       - QA:

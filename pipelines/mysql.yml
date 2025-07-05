@@ -30,7 +30,7 @@ pipelines:
                 - exec:
                     arguments:
                       - ansible.sh
-                      - frontend
+                      - mysql
                     command: bash
                     run_if: passed
       - QA:
