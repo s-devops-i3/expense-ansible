@@ -19,7 +19,7 @@ pipelines:
           environment_variables:
             env: dev
           secure_variables:
-            TESTV: AES:zBl1juYiRAAfBvgdhqX9yw==:9T7E3RbQGjwdncJfgyJYfw==
+            TESTV: AES:Lf2gmGYGHuVX6+AnTHaPXg==:B4enAITPGOumq1v3wzL/7ljE+SESARqlGeSmGBia6zI=
           approval:
             type: manual
             allow_only_on_success: false
