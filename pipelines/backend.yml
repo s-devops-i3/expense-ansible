@@ -18,6 +18,8 @@ pipelines:
           clean_workspace: false
           environment_variables:
             env: dev
+          secure_variables:
+            TESTV: AES:zBl1juYiRAAfBvgdhqX9yw==:9T7E3RbQGjwdncJfgyJYfw==
           approval:
             type: manual
             allow_only_on_success: false
