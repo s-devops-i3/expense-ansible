@@ -24,8 +24,8 @@
   - name: Check the DB connection with our password
     community.mysql.mysql_info:
       login_user: root
-      login_password: {{mysql_root_password}}
-      login_host: mysql-dev.shujadevops.shop
+      login_password: "{{mysql_root_password}}"
+      login_host: mysql-{{env}}.shujadevops.shop
       filter: version
     register: mysql_connection_output
     ignore_errors: yes
