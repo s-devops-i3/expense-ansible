@@ -19,7 +19,7 @@ pipelines:
           environment_variables:
             env: dev
           secure_variables:
-            TESTV: AES:MR8tdL0VboIWgpmmBfJhKA==:qyy661O+iX8sLgJI5GrYL8Z9x+iS8fp4llSXsGm5u4Q=
+            vault_token: AES:VFgCuSEMb1n5L7YhiV+pdw==:uL7O8jiPwXzIte8/UHC3c+kxkipDqBc7q9Z/rXh10wM=
           approval:
             type: manual
             allow_only_on_success: false
