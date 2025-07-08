@@ -10,3 +10,8 @@
 - name: Install Logstash
   ansible.builtin.import_role:
     name: logstash
+
+- name: rsyslog configuration
+  ansible.builtin.import_role:
+    name: rsyslog
+  when: rsyslog_needed
