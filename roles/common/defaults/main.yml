@@ -1,3 +1,4 @@
 rsyslog_needed: false
-logstash_needed: false
+logstash_needed: true
+
 
