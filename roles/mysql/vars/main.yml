@@ -1,2 +1,3 @@
 component: mysql
 logstash_needed: false
+

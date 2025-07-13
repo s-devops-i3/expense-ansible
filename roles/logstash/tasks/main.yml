@@ -7,7 +7,7 @@
   ansible.builtin.dnf:
     name: logstash
     state: installed
-  when: logstash_needed
+
 
 - name: copy logstash conf fle
   ansible.builtin.template:
